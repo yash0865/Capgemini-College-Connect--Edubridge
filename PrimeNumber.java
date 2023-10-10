@@ -1,11 +1,18 @@
 package com.edubridge;
 
+import java.util.Scanner;
+
 public class PrimeNumber {
 	public static void main(String[] args) {
-		for(int i=1; i<=100; i++) {
-			if(isPrime(i)) {
-				System.out.println(i+" ");
-			}
+		Scanner sc = new Scanner(System.in);
+		System.out.print("Enter a number : ");
+		int n = sc.nextInt();
+		
+		if(isPrime(n)) {
+			System.out.println(n+" is a prime number.");
+		}
+		else {
+			System.out.println(n+" is not a prime number.");
 		}
 	}
 	
