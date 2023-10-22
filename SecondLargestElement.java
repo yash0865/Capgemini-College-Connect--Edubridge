@@ -10,28 +10,28 @@ public class SecondLargestElement {
 		System.out.println("Enter size of the array :");
 		int n = sc.nextInt();
 		
-		int[] arr = new int[n];
+		int[] a = new int[n];
 		System.out.println("Enter "+arr.length+" elements :");
 		for(int i=0; i<n; i++) {
-			arr[i] = sc.nextInt();
+			a[i] = sc.nextInt();
 		}
 		
-		int largest = arr[0];
 		
-		for(int i : arr) {
-			if(i > largest) {
-				largest = i;
+		int max1,max2;
+		
+		max1=max2=a[0];
+		
+		for(int i=1;i<a.length;i++) {
+			if(a[i]>max1) {
+				max2=max1;
+				max1=a[i];
+			}
+			else if(a[i]>max2) {
+				max2=a[i];
 			}
 		}
 		
-		int secondLargest = arr[0];
-		for(int i : arr) {
-			if( i != largest  && i > secondLargest) {
-				secondLargest = i;
-			}
-		}
-		
-		System.out.println("Second Largest element = "+secondLargest);
+		System.out.println("Second Largest element in an array ="+max2);
 	}
 
 }
