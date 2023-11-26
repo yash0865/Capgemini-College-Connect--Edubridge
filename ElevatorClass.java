@@ -2,6 +2,12 @@ package com.edu;
 
 import java.util.Scanner;
 
+class InvalidFloor extends Exception{
+	public InvalidFloor(String s) {
+		// TODO Auto-generated constructor stub
+		super(s);
+	}
+}
 class Elevator{
 	private int currentFloor = 1;
 	private Scanner sc = new Scanner(System.in);
@@ -14,6 +20,7 @@ class Elevator{
 			char option = Character.toLowerCase(sc.next().charAt(0));
 			if(option != 's' && option != 'f' && option !='q') {
 				System.out.println("Invalid Option!");
+
 				System.out.println();
 			} else {
 				switch(option) {
